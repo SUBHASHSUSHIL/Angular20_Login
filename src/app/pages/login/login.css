@@ -1,4 +1,4 @@
-body {
+.parent {
     background: linear-gradient(135deg, #6e8efb, #a777e3);
     height: 100vh;
     display: flex;
@@ -7,7 +7,17 @@ body {
     animation: fadeInBody 1s ease-in-out;
 }
 
-.card {
+.login-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    animation: slideIn 1s ease;
+}
+
+.card { 
     border: none;
     border-radius: 20px;
     overflow: hidden;
@@ -33,6 +43,17 @@ body {
     font-weight: bold;
     text-align: center;
     color: #333;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .form-control:focus {
