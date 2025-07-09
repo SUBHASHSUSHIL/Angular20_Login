@@ -28,6 +28,7 @@ export class Login {
         if(response.result)
         { 
           alert("Login successful");
+          localStorage.setItem("angular20token", response.data.token);
           this.router.navigateByUrl("/dashboard");
         } else {
           alert(response.message);
@@ -39,5 +40,4 @@ export class Login {
       }
     })
   }
-
 }
